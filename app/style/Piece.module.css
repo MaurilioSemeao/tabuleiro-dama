@@ -1,0 +1,20 @@
+
+
+.piece{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition:  0.100ms  ease;
+}
+
+.player-1{
+    background-color: black ;
+}
+
+.player-2{
+    background-color: white ;
+}
+
+.piece:hover{
+    transform: scale(113%);
+}
