@@ -2,7 +2,7 @@
 
 ## 📝 Descrição do Projeto
 
-Este projeto é uma implementação de um tabuleiro de Jogo de Damas, desenvolvido como uma atividade para a disciplina de [Programação Script II] na faculdade. O objetivo inicial era criar a representação visual de um tabuleiro com as peças em suas posições iniciais.
+Este projeto é uma implementação de um tabuleiro de Jogo de Damas, desenvolvido como uma atividade para a disciplina de Programação Script II na faculdade. O objetivo inicial era criar a representação visual de um tabuleiro com as peças em suas posições iniciais.
 
 Como um passo adicional, foi implementada uma mecânica básica de interação, permitindo que o usuário selecione e mova as peças pelo tabuleiro. O projeto serve como uma base sólida para a futura implementação completa das regras do Jogo de Damas.
 
@@ -73,7 +73,7 @@ O projeto está funcional, mas a lógica do jogo ainda precisa ser implementada.
 
 ## 👨‍💻 Autor
 
-Feito com ❤️ por **[Maurilio Santos Semeão]**.
+Feito com ❤️ por **Maurilio Santos Semeão**.
 
 [](https://www.google.com/search?q=%5Bhttps://www.linkedin.com/in/seu-usuario-linkedin/%5D\(https://www.linkedin.com/in/seu-usuario-linkedin/\))
 
