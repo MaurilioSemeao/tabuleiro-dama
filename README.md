@@ -41,7 +41,7 @@ Siga os passos abaixo para executar o projeto em seu ambiente local.
 2.  **Navegue até a pasta do projeto:**
 
     ```bash
-    cd seu-repositorio
+    cd tabuleiro-dama
     ```
 
 3.  **Instale as dependências:**
