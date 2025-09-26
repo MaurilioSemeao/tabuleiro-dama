@@ -42,15 +42,17 @@ export default function Board(){
                 return;
             }
 
-            const newBoard = board.map(r => r.map(c =>({...c})))
+            if((row === selected.row+1 && col === selected.col-1) || (row === selected.row+1 && col === selected.col+1)) {
+
+                const newBoard = board.map(r => r.map(c => ({...c})))
 
 
-            newBoard[row][col].piece = {...newBoard[selected.row][selected.col].piece};
-            newBoard[selected.row][selected.col].piece= null;
+                newBoard[row][col].piece = {...newBoard[selected.row][selected.col].piece};
+                newBoard[selected.row][selected.col].piece = null;
 
-            setBoard(newBoard);
-            setSelected(null);
-
+                setBoard(newBoard);
+                setSelected(null);
+            }
         }
 
 
