@@ -69,6 +69,36 @@ export default function Board(){
                 }
                 return;
             }
+
+            if(Math.abs(dRow) === 2 && Math.abs(dCol) === 2) {
+                const middleRow = selected.row + dRow / 2;
+                const middleCol = selected.col + dCol / 2;
+                const middleSquare = board[middleRow][middleCol];
+
+                if(
+                    middleSquare?.piece &&
+                    middleSquare.piece.player !== turn &&
+                    !square.piece
+                ){
+                    const newBoard = board.map(r => r.map(c => ({...c})))
+
+                    newBoard[row][col].piece = {...newBoard[selected.row][selected.col].piece};
+                    newBoard[selected.row][selected.col].piece = null;
+
+
+                    newBoard[middleRow][middleCol].piece = null;
+
+                    setBoard(newBoard);
+                    setSelected(null);
+
+                    setTurn(turn === "player-1" ? "player-2":"player-1");
+                }
+
+            }
+
+
+
+
         }
 
 
