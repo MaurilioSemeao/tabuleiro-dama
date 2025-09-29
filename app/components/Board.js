@@ -26,12 +26,24 @@ export default function Board(){
 
         const [board, setBoard] = useState(initialBoard);
         const [selected, setSelected] = useState(null);
+        const [pieces, setPieces] = useState([{}]);
+        const [turn , setTurn] = useState("player-1");
 
         const handleClick = (row,col) => {
+
             const square = board[row][col];
+            const pieceLeft = board[row+1][col-1];
+            const pieceRight = board[row+1][col+1];
+
+            setPieces([pieceLeft, pieceRight]);
+
+            if(pieces[0]?.piece || pieces[1]?.piece ){
+                if(pieces[0]?.piece !== square.piece)
+                    console.log(pieces[0]?.piece);
+            }
 
             if(!selected){
-                if(square.piece){
+                if(square.piece && square.piece.player === turn){
                     setSelected({row, col});
                 }
                 return
@@ -42,16 +54,25 @@ export default function Board(){
                 return;
             }
 
-            if((row === selected.row+1 && col === selected.col-1) || (row === selected.row+1 && col === selected.col+1)) {
+
+
+
+
+            if(
+                (row === selected.row+1 && col === selected.col-1) ||
+                (row === selected.row+1 && col === selected.col+1) ||
+                (row === selected.row-1 && col === selected.col+1) ||
+                (row === selected.row-1 && col === selected.col-1)
+            ) {
 
                 const newBoard = board.map(r => r.map(c => ({...c})))
-
 
                 newBoard[row][col].piece = {...newBoard[selected.row][selected.col].piece};
                 newBoard[selected.row][selected.col].piece = null;
 
                 setBoard(newBoard);
                 setSelected(null);
+                setTurn(turn === "player-1" ? "player-2":"player-1");
             }
         }
 
