@@ -63,9 +63,9 @@ Siga os passos abaixo para executar o projeto em seu ambiente local.
 
 O projeto está funcional, mas a lógica do jogo ainda precisa ser implementada. Os próximos passos planejados são:
 
-- [ ] **Implementar a lógica de turnos** para alternar entre `player-1` e `player-2`.
-- [ ] **Validar movimentos legais** (apenas na diagonal, para frente).
-- [ ] **Criar a mecânica de captura** de peças adversárias.
+- [x] **Implementar a lógica de turnos** para alternar entre `player-1` e `player-2`.
+- [x] **Validar movimentos legais** (apenas na diagonal, para frente).
+- [x] **Criar a mecânica de captura** de peças adversárias.
 - [ ] **Implementar a promoção de peças** para "Dama" (Rei) ao alcançarem o lado oposto.
 - [ ] **Adicionar regras de movimento para a Dama**.
 - [ ] **Definir condições de vitória e derrota**.
